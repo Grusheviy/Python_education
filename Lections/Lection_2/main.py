@@ -140,7 +140,7 @@ print(dictionary['left']) # ←
 # типы ключей могут отличаться
 print(dictionary['up']) # ↑
 # типы ключей могут отличаться
-dictionary['left'] = '⇐'
+dictionary['left'] = '⇐'2
 
 # print(dictionary['left']) # ⇐
 # print(dictionary['type']) # KeyError: 'type'
