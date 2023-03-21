@@ -11,22 +11,18 @@
 
 from random import randint
 
-n = int(input('Введите длинну массива N: '))
-x = int(input('Введите искомое число X: '))
-list_1 = [randint(1, 10) for i in range(n)]
-# list_1 = [1, 2, 3, 4, 5, 15]
+string_length = int(input('Введите длину массива N: '))
+find_num = int(input('Введите искомое число X: '))
+list_1 = [randint(1, 10) for _ in range(string_length)]
 print(list_1)
 
-closest_min = list_1[0]
-closest_max = list_1[0]
+min_diff = abs(find_num - list_1[0])
+min_num = list_1[0]
 
-for i in list_1:
-    diff = x - i
-    if diff < closest_min:
-        closest_min = diff
-        closest_min = i
-    elif diff > closest_max:
-        closest_max = diff
-        closest_max = i
+for i in range(1, len(list_1)):
+    current_diff = abs(find_num - list_1[i])
+    if current_diff < min_diff:
+        min_diff = current_diff
+        min_num = list_1[i]
 
-print(f'Ближайшие к искомому {x} : {closest_min, closest_max}')
+print(f'Наиболее близкое по величине к числу {find_num} число: {min_num}')
