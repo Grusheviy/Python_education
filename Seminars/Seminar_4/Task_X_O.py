@@ -15,7 +15,7 @@ def win_check(field):
     or field[0] == field[3] == field[6]
     or field[1] == field[4] == field[7]
     or field[2] == field[5] == field[8]
-    or field[0] == field[4] == field[8]
+    or field[0] == field[4] == field[8] 
     or field[2] == field[4] == field[6]):
         return True
     return False
