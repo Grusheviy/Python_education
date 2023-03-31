@@ -7,11 +7,13 @@ first_elem = int(input('Введите первое число арифмети�
 dif = int(input('Введите разность: '))
 total_elem = int(input('Введите количество элементов арифметической прогрессии: '))
 
-list_1 = []
+print(*[first_elem + elem * dif for elem in range(total_elem)]) # лист компрехеншен
 
-for elem in range(total_elem):
-    list_1.append(first_elem + elem * dif)
-# print(list_1)
+# list_1 = []
+
+# for elem in range(total_elem):
+#     list_1.append(first_elem + elem * dif)
 # print(*list_1, sep = '\n')
-print(*list_1, end = " ")
- 
+# print(*list_1, end = " ")
+
+

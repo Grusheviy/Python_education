@@ -10,6 +10,8 @@ print(list_1)
 min_range = int(input('Введите минимальный элемент искомого диапазона: '))
 max_range = int(input('Введите максимальный элемент искомого диапазона: '))
 
-for index, elem in enumerate(list_1):
-    if min_range <= elem <= max_range:
-        print(index)
+# for index, elem in enumerate(list_1):
+#     if min_range <= elem <= max_range:
+#         print(index)
+        
+print(*[index for index, elem in enumerate(list_1) if min_range <= elem <= max_range])
